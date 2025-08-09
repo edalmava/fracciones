@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { ReactNode, useMemo, useState } from "react"
 import {
   FileText,
   FileDown,
@@ -107,7 +107,7 @@ const RESOURCES: Resource[] = [
   },
 ]
 
-const typeIconMap: Record<ResourceType, JSX.Element> = {
+const typeIconMap: Record<ResourceType, ReactNode> = {
   Guía: <FileText className="h-4 w-4" />,
   Actividad: <Puzzle className="h-4 w-4" />,
   Presentación: <Presentation className="h-4 w-4" />,
