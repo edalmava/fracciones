@@ -287,13 +287,15 @@ return (
             Iniciar Aprendizaje
           </a>
         </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 bg-transparent"
-        >
-          Descargar Recursos
-        </Button>
+        
+        <Link
+            href="/recursos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-white rounde text-white hover:bg-white hover:text-blue-600 px-8 py-3 bg-transparent"
+          >
+            Descargar Recursos
+          </Link>
       </div>
     </div>
   </section>
