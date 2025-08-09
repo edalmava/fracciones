@@ -4,10 +4,6 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
-import { BookOpen, Calculator, Users, Target, Play, FileText, Award } from 'lucide-react'
-
-import Link from "next/link"
-
 export const metadata: Metadata = {
   title: "FracciÓN - Aprende Fracciones | Grado 5° Primaria",
   description:
