@@ -19,6 +19,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image';
+import Link from "next/link"
 
 type ResourceType = "Guía" | "Actividad" | "Presentación" | "Video" | "Enlace" | "Manipulativo"
 
@@ -144,8 +146,8 @@ export default function ResourcesGallery() {
     }
   }
 
-  return (
-    <div className="space-y-6">
+  return (    
+    <div className="space-y-6">     
       {/* Filters */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-2">
@@ -183,8 +185,8 @@ export default function ResourcesGallery() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filtered.map((r) => (
           <Card key={r.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="relative">
-              <img
+            <div className="relative">            
+              <Image
                 src={r.cover || "/placeholder.svg"}
                 alt={`Portada del recurso: ${r.title}`}
                 width={320}
@@ -214,7 +216,7 @@ export default function ResourcesGallery() {
               </div>
               <div className="flex items-center justify-between gap-2">
                 <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
-                  <a
+                  <Link
                     href={r.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -226,7 +228,7 @@ export default function ResourcesGallery() {
                       <ExternalLink className="h-4 w-4 mr-2" />
                     )}
                     {r.type === "Guía" ? "Abrir/Descargar" : "Abrir"}
-                  </a>
+                  </Link>
                 </Button>
                 <Button
                   variant="outline"

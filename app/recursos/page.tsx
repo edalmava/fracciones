@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Calculator } from "lucide-react"
 import ResourcesGallery from "@/components/ui/resources-gallery"
 
 export const metadata: Metadata = {
@@ -12,6 +12,27 @@ export const metadata: Metadata = {
 export default function RecursosPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+       <header className="bg-white shadow-sm border-b-2 border-blue-200">
+    <div className="container mx-auto px-4 py-4">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-full flex items-center justify-center">
+            <Calculator className="w-6 h-6 text-white" />
+          </div>
+          <div>
+            <h1 className="text-xl font-bold text-gray-800">Fracciones</h1>
+            <p className="text-sm text-gray-600">Grado 5° - Educación Primaria</p>
+          </div>
+        </div>
+        <nav className="hidden md:flex space-x-6">
+          <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">
+            Inicio
+          </Link>
+          
+        </nav>
+      </div>
+    </div>
+  </header>
       <section className="border-b bg-white/70 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-6 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">

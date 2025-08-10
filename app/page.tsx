@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen, Calculator, Users, Target, Play, FileText, Award } from 'lucide-react'
+import { BookOpen, Calculator, Users, Target, Play, FileText, Award, Download } from 'lucide-react'
 import Link from "next/link"
 
 export default function HomePage() {
@@ -277,7 +277,7 @@ return (
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
-          <a
+          <Link
             href="https://classroom.google.com/c/Nzc5NzMxNzg4MzI4?cjc=s3kbmesc"
             target="_blank"
             rel="noopener noreferrer"
@@ -285,17 +285,24 @@ return (
           >
             <Play className="w-5 h-5 mr-2" />
             Iniciar Aprendizaje
-          </a>
+          </Link>
         </Button>
         
+        <Button
+          variant="outline"
+          size="lg"
+          className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 bg-transparent"
+        >
         <Link
             href="/recursos"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-white rounde text-white hover:bg-white hover:text-blue-600 px-8 py-3 bg-transparent"
+            className="inline-flex items-center"
           >
+            <Download className="w-5 h-5 mr-2" />
             Descargar Recursos
           </Link>
+          </Button>
       </div>
     </div>
   </section>
